@@ -19,10 +19,8 @@ header {
 
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  position: absolute;
-  right: 31%;
 }
 
 .header {
