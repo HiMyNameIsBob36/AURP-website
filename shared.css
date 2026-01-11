@@ -29,11 +29,10 @@ header a {
   margin-left: 15px;
 }
 
-.image {
-  width: 59px;
-  height: 49px;
+.logo {
+  width: 65px;
+  height: 100%;
   vertical-align: middle;
-  border-radius: 7px;
 }
 
 /* Main title and paragraph */
