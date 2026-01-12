@@ -23,15 +23,17 @@ header {
   align-items: center;
 }
 
-.left {
- justify-content: flex-end;
+.active {
+ color: #bot;
+ text-decoration: none;
+ margin-left: 15px;
 }
 
 .right {
  justify-content: flex-start;
 }
 
-header a {
+.hook {
   color: white;
   text-decoration: none;
   margin-left: 15px;
