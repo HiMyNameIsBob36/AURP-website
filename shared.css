@@ -29,8 +29,9 @@ header {
  margin-left: 15px;
 }
 
-.right {
- justify-content: flex-start;
+.text {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .hook {
