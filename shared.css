@@ -94,14 +94,11 @@ header {
   color: black;
 }
 
-
-
-
-
-
-
-
-
+#hero {
+  z-index: -1;
+  width: 100%;
+  
+}
 
 /* Main title and paragraph */
 h1 {
