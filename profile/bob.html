@@ -1,34 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AURP Official Website.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../shared.css">
-    <link rel="icon" href="../assets/logo.png">
-    <meta property="og:title" content="AURP Official Website." />
-    <meta property="og:description" content="Get all the important resources in one website!" />
-    <meta property="og:image" href="../assets/logo.png" />
+<meta charset="UTF-8">
+<title>Staff Profile</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    gap: 24px;
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+  }
+
+  .card {
+    background: linear-gradient(180deg, #3a0f78, #16002e);
+    border-radius: 28px;
+    padding: 24px;
+  }
+
+  /* LEFT PROFILE CARD */
+  .profile {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .avatar {
+    width: 100%;
+    border-radius: 20px;
+    background: #1a0038;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .avatar img {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .name {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .handle {
+    text-align: center;
+    opacity: 0.85;
+  }
+
+  .pill {
+    background: #6a1fcf;
+    border-radius: 999px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  .pill.small {
+    font-size: 14px;
+  }
+
+  .position {
+    margin-top: auto;
+    padding-top: 16px;
+  }
+
+  .position h3 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .position p {
+    margin-top: 8px;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+
+  /* RIGHT ABOUT PANEL */
+  .about {
+    flex: 1;
+  }
+
+  .about h1 {
+    margin: 0;
+    font-size: 48px;
+  }
+
+  .about p {
+    margin-top: 8px;
+    font-size: 18px;
+    opacity: 0.85;
+  }
+</style>
 </head>
 
 <body>
-  <header>
-      <div class="navigation">
-          <a href="https://nsw-rp.netlify.app/"><img src="../assets/logo.png" class="logo"></a>
-          <div class="grid"><a href="https://youtube.com/@AURolePlay"><img src="../assets/youtube.png" class="icon-size"></a><br><a href="https://discord.gg/rWtnWX5Esy"><img src="../assets/discord.png" class="icon-size"></a></div>
-      <div class="text">      
-        <a href="https://nsw-rp.netlify.app/departments" class="hook">Departments</a>
-        <a href="https://nsw-rp.netlify.app/departments" class="active">Home</a>
-        <a href="https://nsw-rp.netlify.app/guidelines"  class="hook">Guidelines</a>
-      </div></div></header>
 
-    <div class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span><strong>Warning!</strong> This website is in development! Please report any issues to Bob.</div>
+<div class="container">
 
-   <img id="hero" url="">
-<p><img src="../assets/logo.png"></p>
+  <!-- LEFT CARD -->
+  <div class="card profile">
 
-    
-  <footer>
-    © NSW Roleplay. 2026 | All rights reserved.
-  </footer>
-    <script src="script.js"> </script>
+    <div class="avatar">
+      <!-- Replace with your image -->
+      <img src="https://i.imgur.com/0y0y0y0.png" alt="Avatar">
+    </div>
+
+    <div class="name">Bob</div>
+    <div class="handle">@heyitbob36 · He/Him</div>
+
+    <div class="pill small">
+      🇦🇺 AUS
+    </div>
+
+    <div class="pill" id="time">
+      ⏰ --:--
+    </div>
+
+    <div class="position">
+      <h3>Position</h3>
+      <strong>Developer</strong>
+      <p>
+        I manage all the custom bots you see,
+        and the website you're using now.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- RIGHT CARD -->
+  <div class="card about">
+    <h1>About me</h1>
+    <p>blah blah blah</p>
+  </div>
+
+</div>
+
+<script>
+  function updateTime() {
+    const timeEl = document.getElementById("time");
+    const now = new Date();
+    const time = now.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+    timeEl.innerHTML = "⏰ " + time;
+  }
+
+  updateTime();
+  setInterval(updateTime, 60000);
+</script>
+
 </body>
+</html>
