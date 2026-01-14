@@ -1,21 +1,35 @@
+const staffTimezone = "Australia/Sydney";
+const timezoneLabel = "AEST";
+
 function updateTime() {
   const timeEl = document.getElementById("time");
+  if (!timeEl) return;
 
-  const formatter = new Intl.DateTimeFormat("en-AU", {
+  const now = new Date();
+
+  const time = now.toLocaleTimeString("en-AU", {
     timeZone: staffTimezone,
     hour: "2-digit",
     minute: "2-digit",
     hour12: true
   });
 
-  const parts = formatter.formatToParts(new Date());
-  const hour = parseInt(parts.find(p => p.type === "hour").value, 10);
+  // Get hour safely (0–23) in staff timezone
+  const hour = parseInt(
+    now.toLocaleString("en-AU", {
+      timeZone: staffTimezone,
+      hour: "numeric",
+      hour12: false
+    }),
+    10
+  );
 
   const isLate = hour >= 22 || hour < 6;
   const icon = isLate ? "🌙" : "⏰";
 
-  timeEl.textContent = `${icon} ${formatter.format(new Date())} (${timezoneLabel})`;
+  timeEl.textContent = `${icon} ${time} (${timezoneLabel})`;
 }
 
+// Run AFTER page loads
 updateTime();
 setInterval(updateTime, 60000);
