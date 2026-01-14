@@ -54,6 +54,7 @@
   .handle {
     text-align: center;
     opacity: 0.85;
+    font-family: "Roboto Mono", monospace;
   }
 
   .pill {
@@ -80,6 +81,7 @@
   .position h3 {
     margin: 0;
     font-size: 28px;
+    font-family: "Roboto Mono", monospace;
   }
 
   .position p {
@@ -96,6 +98,7 @@
   .about h1 {
     margin: 0;
     font-size: 48px;
+    font-family: "Roboto Mono", monospace;
   }
 
   .about p {
